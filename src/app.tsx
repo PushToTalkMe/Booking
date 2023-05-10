@@ -5,15 +5,15 @@ import DatePicker, { registerLocale } from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import ru from "date-fns/locale/ru";
 
-registerLocale("ru", ru);
-
-interface IMeetingRoom {
+export interface IMeetingRoom {
   tower: string;
   floor: number | null;
   room: number | null;
   date: Date | null;
   text: string;
 }
+
+registerLocale("ru", ru);
 
 function App(): React.JSX.Element {
   const [meetingRoom, setMeetingRoom] = useState<IMeetingRoom>({
@@ -45,7 +45,7 @@ function App(): React.JSX.Element {
   return (
     <div className={styles.app}>
       <select
-        className={styles.tower}
+        className={styles.select}
         value={meetingRoom.tower}
         name="tower"
         id="tower"
@@ -60,7 +60,8 @@ function App(): React.JSX.Element {
         ))}
       </select>
       <select
-        className={styles.floor}
+        className={styles.select}
+        value={`${meetingRoom.floor}`}
         name="floor"
         id="floor"
         onChange={(e) =>
@@ -74,7 +75,8 @@ function App(): React.JSX.Element {
         ))}
       </select>
       <select
-        className={styles.room}
+        className={styles.select}
+        value={`${meetingRoom.room}`}
         name="room"
         id="room"
         onChange={(e) =>
@@ -89,7 +91,6 @@ function App(): React.JSX.Element {
       </select>
       <DatePicker
         className={styles.date}
-        showIcon
         selected={meetingRoom.date}
         showTimeSelect
         showDisabledMonthNavigation
