@@ -1,5 +1,3 @@
-# **Booking**
-
 ## Booking (React, Typescript)
 
 Форма для бронирования переговорных.
