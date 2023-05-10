@@ -1,10 +1,10 @@
 ## Booking (React, Typescript)
 
-Форма для бронирования переговорных.
+Приложение - форма для бронирования переговорных.
 
 [Приложение](https://pushtotalkme.github.io/Booking/)
 
-[Код последней версии формы](https://github.com/PushToTalkMe/Booking/tree/release)
+[Код последней версии приложения](https://github.com/PushToTalkMe/Booking/tree/release)
 
 Форма содержит следующие элементы:
   - Выпадающий список с выбором башни (А или Б)
